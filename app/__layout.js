@@ -1,7 +1,7 @@
 import Index from "./index";
 
 export default function Layout() {
-  return <Index/>;
+  return <HomeScreen/>;
 }
 
 
