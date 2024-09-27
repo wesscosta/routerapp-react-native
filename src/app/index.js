@@ -2,17 +2,23 @@ import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { router } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
+import Weather from "../components/weather";
+import WeatherCardDays from "../components/weather";
 
 export default function Home() {
   return (
 
-    <LinearGradient  colors={["#0A0C14", "#17243E", "#17243E"]} style={{flex:1}}>
+    <LinearGradient colors={["#0A0C14", "#17243E", "#17243E"]} style={{ flex: 1 }}>
       <View style={styles.container}>
         <View style={styles.header}>
           <Text style={styles.headerTitle}>Home</Text>
         </View>
         <View style={styles.main}>
-          <Text style={styles.title}>Bem Vindo!! </Text>
+          <Weather/>
+          <WeatherCardDays/>
+        </View>
+        <View style={styles.footer}>
+          
           <TouchableOpacity
             style={styles.touchableOpacity}
             onPress={() => {
@@ -43,10 +49,11 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   main: {
-    height: '75%',
-    width: '100%',
+    flex:4,
+    // height: '100%',
+    // width: '100%',
     display: 'flex',
-    justifyContent: 'center',
+    // justifyContent: 'center',
     alignItems: 'center',
   },
   headerTitle: {
@@ -68,10 +75,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 20,
     marginTop: 40,
-    width: "90%",
+    width: "100%",
   },
   buttonText: {
     color: "#ffffff",
     fontSize: 16,
+    paddingHorizontal:30,
   },
+  footer: {
+    flex:1,
+    bottom:10,
+    color: 'red',
+  }
 });

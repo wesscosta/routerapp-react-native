@@ -54,7 +54,7 @@ export const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
     marginBottom: "5%",
-    color: "#fffw",
+    color: "#fff",
   },
   nav: {
     display: 'flex',

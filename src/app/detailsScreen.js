@@ -57,7 +57,7 @@ export default function DetailsScreen() {
     return (
       <LinearGradient colors={["#0A0C14", "#17243E", "#17243E"]} style={{ flex: 1 }}>
         <View style={styles.container}>
-          <Text>Destination not found.</Text>
+          <Text>Destino não encontrado.</Text>
         </View>
       </LinearGradient>
     );
@@ -69,7 +69,6 @@ export default function DetailsScreen() {
         <View style={styles.header}>
           <Text style={styles.headerTitle}>{destination}</Text>
         </View>
-        {/* Wrap the content below the header in a new View with a green background */}
         <View style={styles.contentBox}>
           <Image source={details.image} style={styles.image} />
           <Text style={styles.description}>{details.description}</Text>
